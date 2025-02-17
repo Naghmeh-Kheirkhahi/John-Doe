@@ -1,11 +1,13 @@
 import React from "react";
+// import flowerLogo from "./../../Images/flower logo.png";
+
 
 function NavbarTest() {
     return (
         <nav className="bg-gray-900 p-5">
             <div className="container flex items-center mx-auto">
                 <div className="flex items-center w-5/6">
-                    <img src="/flower logo.png" alt="Logo" className="w-20 mr-6 rounded-full" />
+                    <img src='./Images/flower logo.png' alt="Logo" className="w-20 mr-6 rounded-full" />
                     <ul className="flex space-x-12 text-xl font-semibold">
                         <li><a href="#" className="text-white hover:text-gray-300">Home</a></li>
                         <li><a href="#" className="text-white hover:text-gray-300">About Us</a></li>

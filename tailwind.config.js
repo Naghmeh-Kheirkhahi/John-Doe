@@ -16,6 +16,10 @@ module.exports = {
       boxShadow: {
         lightShadow: '5px 5px 10px rgb(27, 147, 0)',
       },
+
+      // backgroundImage: {
+      //   'home-bg': "url('/public/Images/home-banner.png')",
+      // },
     },
   },
   variants: {},
