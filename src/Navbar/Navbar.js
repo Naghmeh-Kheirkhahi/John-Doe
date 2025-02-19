@@ -2,7 +2,7 @@
 import React, { useContext } from "react";
 import { FaMoon, FaCircle } from "react-icons/fa";
 import { ThemeContext } from "../Context/ThemeContext";
-// import JDLogo from "./../../Images/JDLogo.png";
+import JDLogo from "../Assets/Images/JD logo.png";
 
 
 function Navbar() {
@@ -10,11 +10,11 @@ function Navbar() {
 
     return (
         <>
-            <div className="bg-black border-b border-black text-white">
+            <div className="bg-black border-b border-black text-white border-b-gray-700">
                 <div className="container mx-auto flex justify-between items-center py-3">
                     {/* Logo */}
                     <div className="text-center">
-                        <img src='./Images/JD logo.png' alt="JD Logo" className="w-28 rounded-full" />
+                        <img src={JDLogo} alt="JD Logo" className="w-28 rounded-full" />
                     </div>
                     {/* Navbar Items */}
                     <div className="flex space-x-8">

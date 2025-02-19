@@ -39,6 +39,7 @@ function App() {
 
       <ThemeProvider>
         <Navbar />
+        <Home />
         
       </ThemeProvider>
     </>

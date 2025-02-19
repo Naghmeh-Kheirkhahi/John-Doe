@@ -1,13 +1,17 @@
 
 import React from "react";
 
+
 function Home() {
     return (
         <>
-            <div className="h-screen flex items-center justify-center overflow-hidden">
-                <div className="text-center text-white">
-                    <h1 className="text-4xl font-bold mb-4">We Design & Build Creative Products</h1>
-                    <button className="bg-orange-500 text-white py-2 px-4 rounded">GET IN TOUCH</button>
+            <div className="bg-black">
+                <div className="bg-home-bg bg-cover bg-center w-3/5 mx-auto h-screen flex items-center justify-center overflow-hidden">
+                    <div className="text-center text-white">
+                        <h1 className="text-7xl font-extrabold mt-64 mb-12 w-3/5 mx-auto leading-tight">We Design & Build Creative Products</h1>
+                        <button className="text-3xl font-bold text-white py-4 px-6 border-2 border-white rounded-md hover:bg-white hover:text-black transition duration-500">GET IN TOUCH</button>
+                        {/* $$$$$$dont forget to link this button to the contact part$$$$$ */}
+                    </div>
                 </div>
             </div>
         </>

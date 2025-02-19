@@ -1,10 +1,11 @@
 
 import React from "react";
+import cart from '../Assets/Images/cart.jpg';
 
 function ProductCard() {
     return (
         <div className="max-w-sm rounded-xl overflow-hidden shadow-2xl bg-white mx-auto">
-            <img className="w-full" src="/cart.jpg" alt="Product Image" />
+            <img className="w-full" src={cart} alt="Product Image" />
             <div className="p-8">
                 <div className="font-bold text-3xl mb-5">Product Title</div>
                 <p className="text-gray-700 text-xl font-bold mb-2">$99.99</p>
