@@ -17,6 +17,7 @@ import About from './NavbarItems/About';
 import Skills from './NavbarItems/Skills';
 import Portfolio from './NavbarItems/Portfolio';
 import Contact from './NavbarItems/Contact';
+import Footer from './Footer/Footer';
 
 
 
@@ -41,6 +42,7 @@ function App() {
         <Navbar />
         <Home />
         
+        <Footer />
       </ThemeProvider>
     </>
   );
