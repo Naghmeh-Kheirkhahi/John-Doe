@@ -1,12 +1,15 @@
-
 import React, { useContext } from "react";
 import { FaMoon, FaCircle } from "react-icons/fa";
 import { ThemeContext } from "../Context/ThemeContext";
 import JDLogo from "../Assets/Images/JD logo.png";
 
-
 function Navbar() {
     const { theme, toggleTheme } = useContext(ThemeContext);
+
+    const handleScroll = (e, id) => {
+        e.preventDefault();
+        document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+    };
 
     return (
         <>
@@ -22,6 +25,7 @@ function Navbar() {
                             <a
                                 key={item}
                                 href={`#${item.toLowerCase()}`}
+                                onClick={(e) => handleScroll(e, item.toLowerCase())}
                                 className="text-2xl font-extrabold relative group"
                             >
                                 {item}

@@ -41,7 +41,7 @@ function App() {
       <ThemeProvider>
         <Navbar />
         <Home />
-        
+
         <Footer />
       </ThemeProvider>
     </>
