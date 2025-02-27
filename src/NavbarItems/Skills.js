@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import html5 from "../Assets/Images/html5.png";
 import css3 from "../Assets/Images/css3.png";
 import javascript from "../Assets/Images/javascript.png";
@@ -83,33 +84,48 @@ function Skills() {
                             I develop simple, intuitive and responsive user interface that helps users get things done with less effort and time with those technologies.
                         </p>
 
-                        <div className="flex items-center">
-                            <button className="rounded-full px-3 py-2 border border-neutral-800 bg-neutral-800">
+                        <div className="bg-neutral-800 rounded-full p-2 w-50 mr-64">
+                            <div className="relative flex bg-neutral-800 rounded-full">
+                                <div
+                                    className={`absolute top-0 h-full w-1/2 bg-orange-400 rounded-3xl transition-all duration-500 ${activeTab === "skills" ? "left-0" : "left-1/2"
+                                        }`}
+                                ></div>
                                 <button
-                                    className={`text-white font-bold text-2xl px-8 py-2 rounded-full border ${activeTab === "skills" ? "bg-orange-400 border-orange-400" : "bg-neutral-800 border-neutral-800"}`}
+                                    className="relative flex-1 py-2 text-center z-10 text-2xl font-bold text-white transition-all duration-500"
                                     onClick={() => setActiveTab("skills")}
                                 >
                                     Skills
                                 </button>
                                 <button
-                                    className={`text-white font-bold text-2xl px-8 py-2 rounded-full border ${activeTab === "tools" ? "bg-orange-400 border-orange-400" : "bg-neutral-800 border-neutral-800"}`}
+                                    className="relative flex-1 py-2 text-center z-10 text-2xl font-bold text-white transition-all duration-500"
                                     onClick={() => setActiveTab("tools")}
                                 >
                                     Tools
                                 </button>
-                            </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div className="md:w-1/2 pl-32 grid grid-cols-5 gap-5 mt-8 mb-16">
-                    {(activeTab === "skills" ? skillsIcons : toolsIcons).map((icon, index) => (
-                        <div
-                            key={index}
-                            className='bg-neutral-800 p-6 rounded-2xl flex items-center justify-center'
+                <div className="md:w-1/2 pl-32 mt-8 mb-16">
+                    <AnimatePresence mode="wait">
+                        <motion.div
+                            key={activeTab}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className="grid grid-cols-5 gap-5"
                         >
-                            <img src={icon} alt={`Icon ${index + 1}`} className="w-full" />
-                        </div>
-                    ))}
+                            {(activeTab === "skills" ? skillsIcons : toolsIcons).map((icon, index) => (
+                                <div
+                                    key={index}
+                                    className='bg-neutral-800 p-6 rounded-2xl flex items-center justify-center'
+                                >
+                                    <img src={icon} alt={`Icon ${index + 1}`} className="w-full" />
+                                </div>
+                            ))}
+                        </motion.div>
+                    </AnimatePresence>
                 </div>
             </div>
         </div>
