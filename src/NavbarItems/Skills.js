@@ -13,7 +13,7 @@ import firebase from "../Assets/Images/firebase.png";
 import pugjs from "../Assets/Images/pugjs.png";
 import sass from "../Assets/Images/sass.png";
 import next from "../Assets/Images/next.png";
-import tailwindcss from "../Assets/Images/tailwindcss.png";
+import tailwind from "../Assets/Images/tailwind.png";
 import gsap from "../Assets/Images/gsap.png";
 import ajax from "../Assets/Images/ajax.png";
 import gulp from "../Assets/Images/gulp.png";
@@ -35,39 +35,39 @@ function Skills() {
     const [activeTab, setActiveTab] = useState("skills");
 
     const skillsIcons = [
-        html5,
-        css3,
-        javascript,
-        typescript,
-        jquery,
-        bootstrap,
-        angular,
-        react,
-        vue,
-        firebase,
-        pugjs,
-        sass,
-        next,
-        tailwindcss,
-        gsap,
+        { src: html5, name: "HTML5" },
+        { src: css3, name: "CSS3" },
+        { src: javascript, name: "JavaScript" },
+        { src: typescript, name: "TypeScript" },
+        { src: jquery, name: "jQuery" },
+        { src: bootstrap, name: "Bootstrap" },
+        { src: angular, name: "Angular" },
+        { src: react, name: "React" },
+        { src: vue, name: "Vue" },
+        { src: firebase, name: "Firebase" },
+        { src: pugjs, name: "PugJS" },
+        { src: sass, name: "Sass" },
+        { src: next, name: "Next.js" },
+        { src: tailwind, name: "Tailwind" },
+        { src: gsap, name: "GSAP" },
     ];
 
     const toolsIcons = [
-        ajax,
-        gulp,
-        webpack,
-        git,
-        npm,
-        command,
-        vscode,
-        trello,
-        clickup,
-        slack,
-        photoshop,
-        adobexd,
-        figma,
-        eslint,
-        postman,
+        { src: ajax, name: "AJAX" },
+        { src: gulp, name: "Gulp" },
+        { src: webpack, name: "Webpack" },
+        { src: git, name: "Git" },
+        { src: npm, name: "NPM" },
+        { src: command, name: "Command Line" },
+        { src: vscode, name: "VS Code" },
+        { src: trello, name: "Trello" },
+        { src: clickup, name: "ClickUp" },
+        { src: slack, name: "Slack" },
+        { src: photoshop, name: "Photoshop" },
+        { src: adobexd, name: "Adobe XD" },
+        { src: figma, name: "Figma" },
+        { src: eslint, name: "ESLint" },
+        { src: postman, name: "Postman" },
     ];
 
     return (
@@ -119,9 +119,19 @@ function Skills() {
                             {(activeTab === "skills" ? skillsIcons : toolsIcons).map((icon, index) => (
                                 <div
                                     key={index}
-                                    className='bg-neutral-800 p-6 rounded-2xl flex items-center justify-center'
+                                    className='relative bg-neutral-800 p-6 rounded-2xl flex items-center justify-center'
                                 >
-                                    <img src={icon} alt={`Icon ${index + 1}`} className="w-full" />
+                                    <img src={icon.src} alt={icon.name} className="w-full" />
+                                    <motion.div
+                                        className="absolute inset-0 flex items-center justify-center rounded-2xl cursor-pointer"
+                                        initial={{ opacity: 0, y: -20 }}
+                                        whileHover={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.5 }}
+                                    >
+                                        <span className="text-white text-center text-2xl font-bold px-3 py-1 bg-orange-400 border border-orange-400 rounded-lg mb-32">
+                                            {icon.name}
+                                        </span>
+                                    </motion.div>
                                 </div>
                             ))}
                         </motion.div>
