@@ -13,10 +13,6 @@ import { ThemeProvider } from './Context/ThemeContext';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './Navbar/Navbar';
 import Home from './NavbarItems/Home';
-import About from './NavbarItems/About';
-import Skills from './NavbarItems/Skills';
-import Portfolio from './NavbarItems/Portfolio';
-import Contact from './NavbarItems/Contact';
 import Footer from './Footer/Footer';
 
 

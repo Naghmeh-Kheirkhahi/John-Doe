@@ -1,5 +1,5 @@
 import React from "react";
-import JDLogo from "../Assets/Images/JD logo.png";
+import CreatoCraftLogo from "../Assets/Images/CreatoCraftLogo.png";
 
 function Footer() {
     return (
@@ -7,7 +7,7 @@ function Footer() {
             <div className="container mx-auto flex justify-between items-center">
                 {/* Left part: Logo */}
                 <div className="flex items-center">
-                    <img src={JDLogo} alt="JD Logo" className="w-40" />
+                    <img src={CreatoCraftLogo} alt="JD Logo" className="w-40" />
                 </div>
                 {/* Right part: Text */}
                 <div className="text-neutral-400 text-2xl">

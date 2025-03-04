@@ -10,7 +10,7 @@ import Contact from "./Contact";
 function Home() {
     return (
         <>
-            <div className="bg-black" id="home">
+            <div className="bg-black pt-20" id="home">
                 <div className="bg-home-bg bg-cover bg-center w-3/5 mx-auto h-screen flex items-center justify-center overflow-hidden">
                     <div className="text-center text-white">
                         <h1 className="text-7xl font-extrabold mt-64 mb-12 w-3/5 mx-auto leading-tight">We Design & Build Creative Products</h1>
