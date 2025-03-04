@@ -3,6 +3,8 @@ import React from "react";
 import Introduction from "../Introduction/Introduction";
 import About from "./About";
 import Skills from "./Skills";
+import Portfolio from "./Portfolio";
+import Contact from "./Contact";
 
 
 function Home() {
@@ -20,6 +22,8 @@ function Home() {
                 <Introduction />
                 <About />
                 <Skills />
+                <Portfolio />
+                <Contact />
             </div>
         </>
     );
