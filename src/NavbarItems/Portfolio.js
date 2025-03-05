@@ -32,7 +32,7 @@ function Portfolio() {
     ];
 
     return (
-        <div className="bg-black mt-64 mx-64 p-8">
+        <div className="bg-black mt-64 mx-64 p-8" id="portfolio">
             <div className="grid grid-cols-3 gap-4">
                 <div className="col-span-1 row-span-1 flex justify-center items-start mt-8">
                     <div className="flex flex-col items-center justify-center mt-8">
