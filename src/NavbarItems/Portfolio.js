@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import portfolio1 from '../Assets/Images/Portfolio1.png';
 import portfolio2 from '../Assets/Images/Portfolio2.png';
 import portfolio3 from '../Assets/Images/Portfolio3.png';
@@ -8,6 +9,8 @@ import portfolio6 from '../Assets/Images/Portfolio6.png';
 import portfolio7 from '../Assets/Images/Portfolio7.png';
 
 function Portfolio() {
+    const [hoveredIndex, setHoveredIndex] = useState(null);
+
     const images = [
         portfolio1,
         portfolio2,
@@ -44,12 +47,43 @@ function Portfolio() {
                     </div>
                 </div>
                 {images.map((src, index) => (
-                    <div key={index} className="flex items-center justify-center p-2 cursor-pointer" style={marginTops[index]}>
+                    <div 
+                        key={index} 
+                        className="relative flex items-center justify-center p-2 cursor-pointer"
+                        style={marginTops[index]}
+                        onMouseEnter={() => setHoveredIndex(index)}
+                        onMouseLeave={() => setHoveredIndex(null)}
+                    >
                         <img src={src} alt={`Portfolio ${index + 1}`} className="w-full h-auto object-cover rounded-2xl" />
+                        
+                        <AnimatePresence>
+                            {hoveredIndex === index && (
+                                <>
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        exit={{ opacity: 0, y: 10 }}
+                                        transition={{ duration: 0.5 }}
+                                        className="mt-48 text-2xl font-bold absolute bg-white text-neutral-800 border border-white px-2 py-1 rounded-lg"
+                                    >
+                                        Image {index + 1}
+                                    </motion.div>
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        exit={{ opacity: 0, y: 10 }}
+                                        transition={{ duration: 0.5 }}
+                                        className="mt-72 text-2xl font-bold absolute bg-white text-neutral-800 border border-white px-2 py-1 rounded-lg"
+                                    >
+                                        March 2025
+                                    </motion.div>
+                                </>
+                            )}
+                        </AnimatePresence>
                     </div>
                 ))}
                 <div className="col-span-1 row-span-1 flex items-center justify-center">
-                    <a href="#" className="text-4xl text-white font-semibold underline text-orange-400 -mt-8">Load more work</a>
+                    <a href="#" className="text-4xl text-orange-400 font-semibold underline text-orange-400 -mt-8">Load more work</a>
                 </div>
             </div>
         </div>
