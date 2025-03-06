@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { ThemeContext } from "../Context/ThemeContext";
 import { motion, AnimatePresence } from "framer-motion";
 import html5 from "../Assets/Images/html5.png";
 import css3 from "../Assets/Images/css3.png";
@@ -33,6 +34,7 @@ import postman from "../Assets/Images/postman.png";
 
 function Skills() {
     const [activeTab, setActiveTab] = useState("skills");
+    const { theme } = useContext(ThemeContext);
 
     const skillsIcons = [
         { src: html5, name: "HTML5" },
@@ -71,33 +73,33 @@ function Skills() {
     ];
 
     return (
-        <div className="bg-black mt-64 p-8" id="skills">
+        <div className="mt-64 p-8" id="skills">
             <div className="mx-64 flex flex-col md:flex-row items-center">
                 <div className="md:w-1/2 md:pr-4 mt-8 md:mt-0 flex items-start">
                     <div className="flex flex-col items-center justify-center mt-8">
-                        <p className="text-2xl text-neutral-400 text-center transform -rotate-90 mb-16 w-40">MY SKILLS</p>
-                        <div className="w-1 h-24 bg-neutral-400"></div>
+                    <p className={`text-2xl text-center transform -rotate-90 mb-16 w-40 ${theme === 'light' ? 'text-neutral-600' : 'text-neutral-400 '}`}>MY SKILLS</p>
+                    <div className={`w-1 h-24 ${theme === 'light' ? ' bg-neutral-600' : ' bg-neutral-400'}`}></div>
                     </div>
                     <div>
-                        <h1 className="text-6xl text-white font-bold mb-12 leading-snug">What My Programming Skills Included?</h1>
-                        <p className="mb-12 text-2xl text-neutral-400 leading-relaxed">
+                        <h1 className={`text-6xl font-bold mb-12 leading-snug ${theme === 'light' ? 'text-neutral-800' : 'text-white'}`}>What My Programming Skills Included?</h1>
+                        <p className={`mb-12 text-2xl leading-relaxed ${theme === 'light' ? 'text-neutral-600' : 'text-neutral-400 '}`}>
                             I develop simple, intuitive and responsive user interface that helps users get things done with less effort and time with those technologies.
                         </p>
 
-                        <div className="bg-neutral-800 rounded-full p-2 w-50 mr-64">
-                            <div className="relative flex bg-neutral-800 rounded-full">
+                        <div className={`rounded-full p-2 w-50 mr-64 ${theme === 'light' ? 'bg-white' : 'bg-neutral-800'}`}>
+                            <div className={`relative flex rounded-full ${theme === 'light' ? 'bg-white' : 'bg-neutral-800'}`}>
                                 <div
                                     className={`absolute top-0 h-full w-1/2 bg-orange-400 rounded-3xl transition-all duration-500 ${activeTab === "skills" ? "left-0" : "left-1/2"
                                         }`}
                                 ></div>
                                 <button
-                                    className="relative flex-1 py-2 text-center z-10 text-2xl font-bold text-white transition-all duration-500"
+                                    className={`relative flex-1 py-2 text-center z-10 text-2xl font-bold transition-all duration-500 ${theme === 'light' ? 'text-neutral-800' : 'text-white'}`}
                                     onClick={() => setActiveTab("skills")}
                                 >
                                     Skills
                                 </button>
                                 <button
-                                    className="relative flex-1 py-2 text-center z-10 text-2xl font-bold text-white transition-all duration-500"
+                                    className={`relative flex-1 py-2 text-center z-10 text-2xl font-bold transition-all duration-500 ${theme === 'light' ? 'text-neutral-800' : 'text-white'}`}
                                     onClick={() => setActiveTab("tools")}
                                 >
                                     Tools
@@ -119,7 +121,7 @@ function Skills() {
                             {(activeTab === "skills" ? skillsIcons : toolsIcons).map((icon, index) => (
                                 <div
                                     key={index}
-                                    className='relative bg-neutral-800 p-6 rounded-2xl flex items-center justify-center'
+                                    className={`relative p-6 rounded-2xl flex items-center justify-center ${theme === 'light' ? 'bg-white' : 'bg-neutral-800'}`}
                                 >
                                     <img src={icon.src} alt={icon.name} className="w-full" />
                                     <motion.div

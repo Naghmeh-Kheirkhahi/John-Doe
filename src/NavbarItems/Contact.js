@@ -14,7 +14,7 @@ function Contact() {
     ];
 
     return (
-        <div className="bg-black mt-64 px-8 pt-8 pb-40 mx-64 flex flex-col md:flex-row" id="contact">
+        <div className="mt-64 px-8 pt-8 pb-40 mx-64 flex flex-col md:flex-row" id="contact">
             <div className="md:w-2/3">
                 <div className="mt-8 md:mt-0 flex items-start">
                     <div className="flex flex-col items-center justify-center mt-8">

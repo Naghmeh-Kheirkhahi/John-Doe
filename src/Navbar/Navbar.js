@@ -50,7 +50,7 @@ function Navbar() {
                             key={item}
                             href={`#${item.toLowerCase()}`}
                             onClick={(e) => handleScrollToSection(e, item.toLowerCase())}
-                            className={`text-2xl font-extrabold relative group ${theme === "light" ? "text-black" : "text-white"
+                            className={`text-2xl font-extrabold relative group ${theme === "light" ? "text-neutral-800" : "text-white"
                                 }`}
                         >
                             {item}

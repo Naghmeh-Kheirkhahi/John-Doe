@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { ThemeContext } from "../Context/ThemeContext";
 import { motion, AnimatePresence } from "framer-motion";
 import portfolio1 from '../Assets/Images/Portfolio1.png';
 import portfolio2 from '../Assets/Images/Portfolio2.png';
@@ -10,6 +11,7 @@ import portfolio7 from '../Assets/Images/Portfolio7.png';
 
 function Portfolio() {
     const [hoveredIndex, setHoveredIndex] = useState(null);
+    const { theme } = useContext(ThemeContext);
 
     const images = [
         portfolio1,
@@ -32,16 +34,16 @@ function Portfolio() {
     ];
 
     return (
-        <div className="bg-black mt-64 mx-64 p-8" id="portfolio">
+        <div className="mt-64 mx-64 p-8" id="portfolio">
             <div className="grid grid-cols-3 gap-4">
                 <div className="col-span-1 row-span-1 flex justify-center items-start mt-8">
                     <div className="flex flex-col items-center justify-center mt-8">
-                        <p className="text-2xl text-neutral-400 text-center transform -rotate-90 mb-16 w-40">MY WORKS</p>
-                        <div className="w-1 h-24 bg-neutral-400"></div>
+                    <p className={`text-2xl text-center transform -rotate-90 mb-16 w-40 ${theme === 'light' ? 'text-neutral-600' : 'text-neutral-400 '}`}>MY WORKS</p>
+                    <div className={`w-1 h-24 ${theme === 'light' ? ' bg-neutral-600' : ' bg-neutral-400'}`}></div>
                     </div>
                     <div>
-                        <h1 className="text-6xl text-white font-bold mb-12 leading-snug">See My Works Which Will Amaze You!</h1>
-                        <p className="text-2xl text-neutral-400 leading-relaxed">
+                        <h1 className={`text-6xl font-bold mb-12 leading-snug ${theme === 'light' ? 'text-neutral-800' : 'text-white'}`}>See My Works Which Will Amaze You!</h1>
+                        <p className={`mb-12 text-2xl leading-relaxed ${theme === 'light' ? 'text-neutral-600' : 'text-neutral-400 '}`}>
                             We develop the best quality website that serves for the long-term. Well-documented, clean, easy and elegant interface helps any non-technical clients.
                         </p>
                     </div>
