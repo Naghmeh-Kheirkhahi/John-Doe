@@ -1,4 +1,5 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, useContext } from "react";
+import { ThemeContext } from "../Context/ThemeContext";
 import { FaArrowUp } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import Introduction from "../Introduction/Introduction";
@@ -8,6 +9,7 @@ import Portfolio from "./Portfolio";
 import Contact from "./Contact";
 
 function Home() {
+    const { theme } = useContext(ThemeContext);
     const contactRef = useRef(null);
     const [showArrow, setShowArrow] = useState(false);
 
@@ -36,8 +38,8 @@ function Home() {
 
     return (
         <>
-            <div className="bg-black pt-20" id="home">
-                <div className="bg-home-bg bg-cover bg-center w-3/5 mx-auto h-screen flex items-center justify-center overflow-hidden">
+            <div className={`pt-20 ${theme === 'light' ? 'bg-neutral-200' : 'bg-black'}`} id="home">
+                <div className="bg-home-bg bg-cover mx-auto bg-center bg-no-repeat w-3/5 flex items-center justify-center overflow-hidden" style={{ minHeight: "110vh" }}>
                     <div className="text-center text-white">
                         <h1 className="text-7xl font-extrabold mt-64 mb-12 w-3/5 mx-auto leading-tight">
                             We Design & Build Creative Products
@@ -63,7 +65,7 @@ function Home() {
                 <AnimatePresence>
                     {showArrow && (
                         <motion.div
-                            className="fixed bottom-8 right-8 text-white p-5 border-4 border-white rounded-full cursor-pointer"
+                            className={`fixed bottom-8 right-8 p-5 border-4 rounded-full cursor-pointer ${theme === "light" ? "border-neutral-900 text-neutral-900" : "border-white text-white"}`}
                             onClick={scrollToTop}
                             initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: 1, y: 0 }}
