@@ -85,7 +85,7 @@ function Portfolio() {
                     </div>
                 ))}
                 <div className="col-span-1 row-span-1 flex items-center justify-center">
-                    <a href="#" className="text-4xl text-orange-400 font-semibold underline text-orange-400 -mt-8">Load more work</a>
+                    <a href="#" className={`text-4xl font-semibold underline -mt-8 ${theme === 'light' ? 'text-orange-500' : 'text-orange-400'}`}>Load more work</a>
                 </div>
             </div>
         </div>
