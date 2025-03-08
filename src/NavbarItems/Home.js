@@ -38,14 +38,14 @@ function Home() {
 
     return (
         <>
-            <div className={`pt-20 ${theme === 'light' ? 'bg-neutral-200' : 'bg-black'}`} id="home">
-                <div className="bg-home-bg bg-contain mx-auto bg-center bg-no-repeat h-screen flex items-center justify-center overflow-hidden">
+            <div className={`pt-10 md:pt-20 ${theme === 'light' ? 'bg-neutral-200' : 'bg-black'}`} id="home">
+                <div className="bg-home-bg bg-contain bg-center bg-no-repeat h-screen flex items-center justify-center overflow-hidden">
                     <div className="text-center text-white">
-                        <h1 className="text-7xl font-extrabold mt-64 mb-12 w-3/5 mx-auto leading-tight">
+                        <h1 className="w-3/5 font-extrabold mx-auto leading-tight text-4xl md:text-5xl xl:text-7xl mt-32 xl:mt-56 mb-8 xl:mb-12">
                             We Design & Build Creative Products
                         </h1>
                         <button
-                            className="text-3xl font-bold text-white py-4 px-6 border-2 border-white rounded-md hover:bg-white hover:text-black transition duration-500"
+                            className="text-xl md:text-2xl xl:text-3xl font-bold text-white py-2 xl:py-4 px-4 xl:px-6 border-2 border-white rounded-md hover:bg-white hover:text-black transition duration-500"
                             onClick={scrollToContact}
                         >
                             GET IN TOUCH
@@ -65,7 +65,7 @@ function Home() {
                 <AnimatePresence>
                     {showArrow && (
                         <motion.div
-                            className={`fixed bottom-8 right-8 p-5 border-4 rounded-full cursor-pointer ${theme === "light" ? "border-neutral-900 text-neutral-900" : "border-white text-white"}`}
+                            className={`hidden lg:block fixed bottom-8 right-8 p-5 border-4 rounded-full cursor-pointer ${theme === "light" ? "border-neutral-900 text-neutral-900" : "border-white text-white"}`}
                             onClick={scrollToTop}
                             initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: 1, y: 0 }}

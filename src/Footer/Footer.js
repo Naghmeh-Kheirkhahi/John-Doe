@@ -11,10 +11,10 @@ function Footer() {
             <div className="container mx-auto flex justify-between items-center">
                 {/* Left part: Logo */}
                 <div className="flex items-center">
-                    <img src={CreatoCraftLogo} alt="JD Logo" className="w-40" />
+                    <img src={CreatoCraftLogo} alt="JD Logo" className="w-20 md:w-28 xl:w-40" />
                 </div>
                 {/* Right part: Text */}
-                <div className={`text-2xl ${theme === 'light' ? 'text-neutral-600' : 'text-neutral-400 '}`}>
+                <div className={`text-md sm:text-lg md:text-xl xl:text-2xl ${theme === 'light' ? 'text-neutral-600' : 'text-neutral-400 '}`}>
                     <p>© 2025 <a href="https://www.linkedin.com/in/naghmeh-kheirkhahi-0ba42324b/" className={`no-underline ${theme === 'light' ? 'text-orange-500' : 'text-orange-400'}`}>Naghmeh Kheirkhahi</a>. All rights reserved.</p>
                 </div>
             </div>
