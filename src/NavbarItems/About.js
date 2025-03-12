@@ -7,7 +7,7 @@ function About() {
     const { theme } = useContext(ThemeContext);
 
     return (
-        <div className="mt-64 p-8" id="about">
+        <div className="w-5/6 mx-auto mt-40 xl:mt-56 2xl:mt-64" id="about">
             <div className="mx-64 flex flex-col md:flex-row items-center">
                 <div className="md:w-1/2">
                     <img src={johnDoeImg} alt="John Doe" className="w-full h-auto" />
