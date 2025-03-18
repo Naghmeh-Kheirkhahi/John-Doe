@@ -73,33 +73,32 @@ function Skills() {
     ];
 
     return (
-        <div className="mt-64 p-8" id="skills">
-            <div className="mx-64 flex flex-col md:flex-row items-center">
-                <div className="md:w-1/2 md:pr-4 mt-8 md:mt-0 flex items-start">
+        <div className="w-5/6 mx-16 2xl:mx-auto mt-40 md:mt-24 xl:mt-40 2xl:mt-64" id="skills">
+            <div className="2xl:mx-24 flex flex-col md:flex-row items-center">
+                <div className="w-full md:w-1/2 mb-4 sm:mb-8 md:mb-0 px-8 md:pr-4 flex items-start">
                     <div className="flex flex-col items-center justify-center mt-8">
-                    <p className={`text-2xl text-center transform -rotate-90 mb-16 w-40 ${theme === 'light' ? 'text-neutral-600' : 'text-neutral-400 '}`}>MY SKILLS</p>
-                    <div className={`w-1 h-24 ${theme === 'light' ? ' bg-neutral-600' : ' bg-neutral-400'}`}></div>
+                        <p className={`text-sm xl:text-lg 2xl:text-2xl text-center transform -rotate-90 mb-8 xl:mb-12 2xl:mb-16 w-20 md:w-28 xl:w-40 ${theme === 'light' ? 'text-neutral-600' : 'text-neutral-400 '}`}>MY SKILLS</p>
+                        <div className={`w-1 h-16 md:h-20 xl:h-24 ${theme === 'light' ? ' bg-neutral-600' : ' bg-neutral-400'}`}></div>
                     </div>
                     <div>
-                        <h1 className={`text-6xl font-bold mb-12 leading-snug ${theme === 'light' ? 'text-neutral-800' : 'text-white'}`}>What My Programming Skills Included?</h1>
-                        <p className={`mb-12 text-2xl leading-relaxed ${theme === 'light' ? 'text-neutral-600' : 'text-neutral-400 '}`}>
-                            I develop simple, intuitive and responsive user interface that helps users get things done with less effort and time with those technologies.
+                        <h1 className={`text-2xl xl:text-4xl 2xl:text-6xl font-bold mb-4 xl:mb-8 2xl:mb-12 leading-snug ${theme === 'light' ? 'text-neutral-800' : 'text-white'}`}>What My Programming Skills Included?</h1>
+                        <p className={`text-sm xl:text-lg 2xl:text-2xl mb-4 xl:mb-8 2xl:mb-12 leading-relaxed ${theme === 'light' ? 'text-neutral-600' : 'text-neutral-400 '}`}>I develop simple, intuitive and responsive user interface that helps users get things done with less effort and time with those technologies.
                         </p>
 
-                        <div className={`rounded-full p-2 w-50 mr-64 ${theme === 'light' ? 'bg-white' : 'bg-neutral-800'}`}>
+                        <div className={`rounded-full p-1 2xl:p-2 w-50 mr-24 sm:mr-32 md:mr-8 lg:mr-24 xl:mr-32 2xl:mr-64 ${theme === 'light' ? 'bg-white' : 'bg-neutral-800'}`}>
                             <div className={`relative flex rounded-full ${theme === 'light' ? 'bg-white' : 'bg-neutral-800'}`}>
                                 <div
                                     className={`absolute top-0 h-full w-1/2 bg-orange-400 rounded-3xl transition-all duration-500 ${activeTab === "skills" ? "left-0" : "left-1/2"
                                         }`}
                                 ></div>
                                 <button
-                                    className={`relative flex-1 py-2 text-center z-10 text-2xl font-bold transition-all duration-500 ${theme === 'light' ? 'text-neutral-800' : 'text-white'}`}
+                                    className={`relative flex-1 py-1 2xl:py-2 text-center z-10 text-sm lg:text-md xl:text-lg 2xl:text-2xl font-bold transition-all duration-500 ${theme === 'light' ? 'text-neutral-800' : 'text-white'}`}
                                     onClick={() => setActiveTab("skills")}
                                 >
                                     Skills
                                 </button>
                                 <button
-                                    className={`relative flex-1 py-2 text-center z-10 text-2xl font-bold transition-all duration-500 ${theme === 'light' ? 'text-neutral-800' : 'text-white'}`}
+                                    className={`relative flex-1 py-1 2xl:py-2 text-center z-10 ;text-sm lg:text-md xl:text-lg 2xl:text-2xl font-bold transition-all duration-500 ${theme === 'light' ? 'text-neutral-800' : 'text-white'}`}
                                     onClick={() => setActiveTab("tools")}
                                 >
                                     Tools
@@ -108,7 +107,7 @@ function Skills() {
                         </div>
                     </div>
                 </div>
-                <div className="md:w-1/2 pl-32 mt-8 mb-16">
+                <div className="w-full mx-auto md:w-1/2 px-20 md:pl-24 md:pr-0 lg:pl-32 xl:pl-40 2xl:pl-32 mt-8 mb-16">
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={activeTab}
@@ -116,12 +115,12 @@ function Skills() {
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             transition={{ duration: 0.5 }}
-                            className="grid grid-cols-5 gap-5"
+                            className="grid grid-cols-5 gap-3 sm:gap-4 md:gap-2 lg:gap-3 2xl:gap-5"
                         >
                             {(activeTab === "skills" ? skillsIcons : toolsIcons).map((icon, index) => (
                                 <div
                                     key={index}
-                                    className={`relative p-6 rounded-2xl flex items-center justify-center ${theme === 'light' ? 'bg-white' : 'bg-neutral-800'}`}
+                                    className={`relative p-3 sm:p-4 md:p-2 xl:p-3 2xl:p-6 rounded-2xl flex items-center justify-center ${theme === 'light' ? 'bg-white' : 'bg-neutral-800'}`}
                                 >
                                     <img src={icon.src} alt={icon.name} className="w-full" />
                                     <motion.div

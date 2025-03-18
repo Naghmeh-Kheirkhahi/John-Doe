@@ -31,7 +31,7 @@ function Navbar() {
 
     return (
         <div
-            className={`fixed w-full z-10 transition-all duration-500 transform ${theme === "light"
+            className={`fixed w-full z-50 transition-all duration-500 transform ${theme === "light"
                 ? scrolled
                     ? "bg-white translate-y-0"
                     : "bg-neutral-200 translate-y-2"

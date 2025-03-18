@@ -65,14 +65,14 @@ function Home() {
                 <AnimatePresence>
                     {showArrow && (
                         <motion.div
-                            className={`hidden lg:block fixed bottom-8 right-8 p-5 border-4 rounded-full cursor-pointer ${theme === "light" ? "border-neutral-900 text-neutral-900" : "border-white text-white"}`}
+                            className={`hidden lg:block fixed bottom-8 right-8 p-4 2xl:p-5 border-4 rounded-full cursor-pointer ${theme === "light" ? "border-neutral-900 text-neutral-900" : "border-white text-white"}`}
                             onClick={scrollToTop}
                             initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: 50 }}
                             transition={{ duration: 0.5 }}
                         >
-                            <FaArrowUp className="text-2xl" />
+                            <FaArrowUp className="text-xl 2xl:text-2xl" />
                         </motion.div>
                     )}
                 </AnimatePresence>
