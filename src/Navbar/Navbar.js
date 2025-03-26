@@ -85,7 +85,7 @@ function Navbar() {
             </div>
             {/* Mobile Menu */}
             {menuOpen && (
-                <div className={`md:hidden py-4 px-20 sm:px-16 ${theme === "light" ? 'text-neutral-800' : 'text-white'} ${theme === "light" ? (scrolled ? 'bg-white' : 'bg-neutral-200') : (scrolled ? 'bg-neutral-800' : 'bg-black')}`}>
+                <div className={`md:hidden py-4 px-20 sm:px-16 ${theme === "light" ? 'text-neutral-800' : 'text-white'}`}>
 
                     <div className="flex justify-end">
                         <FaTimes className={`text-2xl cursor-pointer ${theme === "light" ? (scrolled ? 'text-neutral-300' : 'text-neutral-200') : (scrolled ? 'text-neutral-600' : 'text-black')}`} onClick={() => setMenuOpen(false)} />

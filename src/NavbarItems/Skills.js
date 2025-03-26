@@ -72,10 +72,12 @@ function Skills() {
         { src: postman, name: "Postman" },
     ];
 
-    return (
-        <div className="w-5/6 mx-16 2xl:mx-auto mt-40 md:mt-24 xl:mt-40 2xl:mt-64" id="skills">
-            <div className="2xl:mx-24 flex flex-col md:flex-row items-center">
-                <div className="w-full md:w-1/2 mb-4 sm:mb-8 md:mb-0 px-8 md:pr-4 flex items-start">
+    // w-5/6 mx-16 2xl:mx-auto mt-40 md:mt-24 xl:mt-40 2xl:mt-64
+    // w-full md:w-1/2 mb-4 sm:mb-8 md:mb-0 px-8 md:pr-4 flex items-start
+    return ( 
+        <div className="w-5/6 mx-auto mt-40 xl:mt-56 2xl:mt-72" id="skills">
+            <div className="ml-0 md:-ml-12 xl:-ml-16 2xl:ml-8 md:mr-4 lg:mr-0 2xl:mr-28 flex flex-col md:flex-row items-center">
+                <div className="w-full md:w-1/2 pr-16 pl-6 md:pl-0 md:pr-8 lg:px-0 mb-8 md:mb-0 flex items-start">
                     <div className="flex flex-col items-center justify-center mt-8">
                         <p className={`text-sm xl:text-lg 2xl:text-2xl text-center transform -rotate-90 mb-8 xl:mb-12 2xl:mb-16 w-20 md:w-28 xl:w-40 ${theme === 'light' ? 'text-neutral-600' : 'text-neutral-400 '}`}>MY SKILLS</p>
                         <div className={`w-1 h-16 md:h-20 xl:h-24 ${theme === 'light' ? ' bg-neutral-600' : ' bg-neutral-400'}`}></div>
@@ -107,7 +109,7 @@ function Skills() {
                         </div>
                     </div>
                 </div>
-                <div className="w-full mx-auto md:w-1/2 px-20 md:pl-24 md:pr-0 lg:pl-32 xl:pl-40 2xl:pl-32 mt-8 mb-16">
+                <div className="w-full md:w-1/2 px-24 md:pr-0 md:pl-8 lg:pl-20 xl:pl-28 2xl:pl-32 sm:mt-4 md:mt-8 md:mb-16">
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={activeTab}
@@ -115,12 +117,12 @@ function Skills() {
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             transition={{ duration: 0.5 }}
-                            className="grid grid-cols-5 gap-3 sm:gap-4 md:gap-2 lg:gap-3 2xl:gap-5"
+                            className="grid grid-cols-5 gap-2 sm:gap-3 md:gap-2 lg:gap-3 2xl:gap-5"
                         >
                             {(activeTab === "skills" ? skillsIcons : toolsIcons).map((icon, index) => (
                                 <div
                                     key={index}
-                                    className={`relative p-3 sm:p-4 md:p-2 xl:p-3 2xl:p-6 rounded-2xl flex items-center justify-center ${theme === 'light' ? 'bg-white' : 'bg-neutral-800'}`}
+                                    className={`relative p-3 md:p-2 xl:p-3 2xl:p-6 rounded-2xl flex items-center justify-center ${theme === 'light' ? 'bg-white' : 'bg-neutral-800'}`}
                                 >
                                     <img src={icon.src} alt={icon.name} className="w-full" />
                                     <motion.div

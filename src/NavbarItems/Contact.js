@@ -21,13 +21,12 @@ function Contact() {
             <div className="md:w-3/5 mb-8 md:mb-0 md:mr-8 lg:mr-10 xl:mr-16">
                 <div className="mb-4 2xl:mb-0 mt-8 md:mt-0 flex items-start">
                     <div className="flex flex-col items-center justify-center mt-8">
-                        <p className={`text-sm xl:text-lg 2xl:text-2xl text-center transform -rotate-90 mb-8 xl:mb-12 2xl:mb-16 w-20 md:w-28 xl:w-40 ${theme === 'light' ? 'text-neutral-600' : 'text-neutral-400 '}`}>MY SKILLS</p>
+                        <p className={`text-sm xl:text-lg 2xl:text-2xl text-center transform -rotate-90 mb-8 xl:mb-12 2xl:mb-16 w-20 md:w-28 xl:w-40 ${theme === 'light' ? 'text-neutral-600' : 'text-neutral-400 '}`}>CONTACT</p>
                         <div className={`w-1 h-16 md:h-20 xl:h-24 ${theme === 'light' ? ' bg-neutral-600' : ' bg-neutral-400'}`}></div>
                     </div>
                     <div>
-                        <h1 className={`text-2xl xl:text-4xl 2xl:text-6xl font-bold mb-4 xl:mb-8 2xl:mb-12 leading-snug ${theme === 'light' ? 'text-neutral-800' : 'text-white'}`}>What My Programming Skills Included?</h1>
-                        <p className={`text-sm xl:text-lg 2xl:text-2xl mb-4 xl:mb-8 2xl:mb-12 leading-relaxed ${theme === 'light' ? 'text-neutral-600' : 'text-neutral-400 '}`}>I develop simple, intuitive and responsive user interface that helps users get things done with less effort and time with those technologies.
-                        </p>
+                        <h1 className={`text-2xl xl:text-4xl 2xl:text-6xl font-bold mb-4 xl:mb-8 2xl:mb-12 leading-snug ${theme === 'light' ? 'text-neutral-800' : 'text-white'}`}>Have You Any Project? Please Drop a Message</h1>
+                        <p className={`text-sm xl:text-lg 2xl:text-2xl mb-4 xl:mb-8 2xl:mb-12 leading-relaxed ${theme === 'light' ? 'text-neutral-600' : 'text-neutral-400 '}`}>Get in touch and let me know how i can help. Fill out the form and i’ll be in touch as soon as possible.</p>
                     </div>
                 </div>
                 <div className="ml-16 md:ml-20">

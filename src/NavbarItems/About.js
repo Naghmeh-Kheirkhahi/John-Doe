@@ -7,12 +7,12 @@ function About() {
     const { theme } = useContext(ThemeContext);
 
     return (
-        <div className="w-5/6 mx-auto mt-40 xl:mt-56 2xl:mt-80" id="about">
+        <div className="w-5/6 mx-auto mt-40 xl:mt-56 2xl:mt-72" id="about">
             <div className="2xl:mx-24 flex flex-col md:flex-row items-center">
-                <div className="w-2/3 mb-8 md:mb-0 md:w-1/2">
+                <div className="w-2/3 mx-auto md:1/3 lg:w-1/2 mb-8 md:mb-0">
                     <img src={johnDoeImg} alt="John Doe" className="w-full h-auto" />
                 </div>
-                <div className="w-full md:w-1/2 px-8 md:pl-4 xl:pl-8 flex items-start">
+                <div className="w-full md:2/3 lg:w-1/2 pr-14 pl-6 md:px-0 flex items-start">
                     <div className="flex flex-col items-center justify-center mt-8">
                         <p className={`text-sm xl:text-lg 2xl:text-2xl text-center transform -rotate-90 mb-8 xl:mb-12 2xl:mb-16 w-20 md:w-28 xl:w-40 ${theme === 'light' ? 'text-neutral-600' : 'text-neutral-400 '}`}>ABOUT ME</p>
                         <div className={`w-1 h-16 md:h-20 xl:h-24 ${theme === 'light' ? ' bg-neutral-600' : ' bg-neutral-400'}`}></div>
