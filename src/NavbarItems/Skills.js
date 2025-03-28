@@ -72,8 +72,7 @@ function Skills() {
         { src: postman, name: "Postman" },
     ];
 
-    // w-5/6 mx-16 2xl:mx-auto mt-40 md:mt-24 xl:mt-40 2xl:mt-64
-    // w-full md:w-1/2 mb-4 sm:mb-8 md:mb-0 px-8 md:pr-4 flex items-start
+    
     return ( 
         <div className="w-5/6 mx-auto mt-40 xl:mt-56 2xl:mt-72" id="skills">
             <div className="ml-0 md:-ml-12 xl:-ml-16 2xl:ml-8 md:mr-4 lg:mr-0 2xl:mr-28 flex flex-col md:flex-row items-center">

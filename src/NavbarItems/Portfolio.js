@@ -23,25 +23,31 @@ function Portfolio() {
         { src: portfolio7, col: 2, row: 3 },
     ];
 
+    const mobileImages = [
+        portfolio1, portfolio2, portfolio3, portfolio4,
+        portfolio5, portfolio6, portfolio7
+    ];
+
+
     return (
-        <div className="2xl:w-4/5 pl-32 md:pl-10 2xl:pl-24 pr-28 md:pr-24 2xl:pr-16 md:mx-16 2xl:mx-auto mt-16 md:mt-24 xl:mt-40 2xl:mt-64" id="portfolio">
-            <div className="flex gap-4">
+        <div className="w-5/6 mx-auto mt-40 xl:mt-56 2xl:mt-72" id="portfolio">
+            <div className="hidden lg:flex lg:gap-3 lg:gap-4 lg:-ml-12 xl:-ml-16 xl:-mr-2 2xl:mr-28 2xl:ml-8">
                 {/* First Column */}
-                <div className="w-1/3 flex flex-col gap-4">
-                    <div className="flex items-center justify-center mt-8">
-                        <div className="flex flex-col items-center justify-center">
+                <div className="lg:w-1/3 lg:flex lg:flex-col gap-3 lg:gap-4">
+                    <div className="flex items-center justify-center lg:mt-5 2xl:mt-10">
+                        <div className="flex flex-col items-center justify-center mt-12 lg:-mt-8 xl:-mt-32">
                             <p className={`text-sm xl:text-lg 2xl:text-2xl text-center transform -rotate-90 mb-8 xl:mb-12 2xl:mb-16 w-20 md:w-28 xl:w-40 ${theme === 'light' ? 'text-neutral-600' : 'text-neutral-400 '}`}>MY WORKS</p>
                             <div className={`w-1 h-16 md:h-20 xl:h-24 ${theme === 'light' ? ' bg-neutral-600' : ' bg-neutral-400'}`}></div>
                         </div>
                         <div>
                             <h1 className={`text-2xl xl:text-4xl 2xl:text-6xl font-bold mb-4 xl:mb-8 2xl:mb-12 leading-snug ${theme === 'light' ? 'text-neutral-800' : 'text-white'}`}>See My Works Which Will Amaze You!</h1>
-                            <p className={`text-sm xl:text-lg 2xl:text-2xl mb-4 xl:mb-8 2xl:mb-12 leading-relaxed ${theme === 'light' ? 'text-neutral-600' : 'text-neutral-400 '}`}>We develop the best quality website that serves for the long-term. Well-documented, clean, easy and elegant interface helps any non-technical clients.</p>
+                            <p className={`text-sm xl:text-lg 2xl:text-2xl mb-4 leading-relaxed ${theme === 'light' ? 'text-neutral-600' : 'text-neutral-400 '}`}>We develop the best quality website that serves for the long-term. Well-documented, clean, easy and elegant interface helps any non-technical clients.</p>
                         </div>
                     </div>
                     {images.filter(img => img.col === 1).map((img, index) => (
                         <div
                             key={index}
-                            className="relative flex items-center justify-center p-2 cursor-pointer"
+                            className="relative flex items-center justify-center 2xl:p-2 cursor-pointer lg:ml-12 xl:ml-16"
                             onMouseEnter={() => setHoveredIndex(index)}
                             onMouseLeave={() => setHoveredIndex(null)}
                         >
@@ -54,7 +60,7 @@ function Portfolio() {
                                             animate={{ opacity: 1, y: 0 }}
                                             exit={{ opacity: 0, y: 10 }}
                                             transition={{ duration: 0.5 }}
-                                            className="mt-40 text-2xl font-bold absolute bg-white text-neutral-800 border border-white px-2 py-1 rounded-lg"
+                                            className="mt-4 2xl:mt-40 text-sm lg:text-md xl:text-lg 2xl:text-2xl font-bold absolute bg-white text-neutral-800 border border-white px-2 py-1 rounded-lg"
                                         >
                                             Image {index + 1}
                                         </motion.div>
@@ -63,7 +69,7 @@ function Portfolio() {
                                             animate={{ opacity: 1, y: 0 }}
                                             exit={{ opacity: 0, y: 10 }}
                                             transition={{ duration: 0.5 }}
-                                            className="mt-64 text-2xl font-bold absolute bg-white text-neutral-800 border border-white px-2 py-1 rounded-lg"
+                                            className="mt-20 xl:mt-24 2xl:mt-64 text-sm lg:text-md xl:text-lg 2xl:text-2xl font-bold absolute bg-white text-neutral-800 border border-white px-2 py-1 rounded-lg"
                                         >
                                             March 2025
                                         </motion.div>
@@ -74,11 +80,11 @@ function Portfolio() {
                     ))}
                 </div>
                 {/* Second Column */}
-                <div className="w-1/3 flex flex-col gap-4">
+                <div className="lg:w-1/3 lg:flex lg:flex-col gap-3 lg:gap-4">
                     {images.filter(img => img.col === 2).map((img, index) => (
                         <div
                             key={index}
-                            className="relative flex items-center justify-center p-2 cursor-pointer"
+                            className="relative flex items-center justify-center 2xl:p-2 cursor-pointer"
                             onMouseEnter={() => setHoveredIndex(index)}
                             onMouseLeave={() => setHoveredIndex(null)}
                         >
@@ -91,16 +97,16 @@ function Portfolio() {
                                             animate={{ opacity: 1, y: 0 }}
                                             exit={{ opacity: 0, y: 10 }}
                                             transition={{ duration: 0.5 }}
-                                            className="mt-40 text-2xl font-bold absolute bg-white text-neutral-800 border border-white px-2 py-1 rounded-lg"
+                                            className="mt-4 2xl:mt-40 text-sm lg:text-md xl:text-lg 2xl:text-2xl font-bold absolute bg-white text-neutral-800 border border-white px-2 py-1 rounded-lg"
                                         >
-                                            Image {index + 1}
+                                            Image {index + 3}
                                         </motion.div>
                                         <motion.div
                                             initial={{ opacity: 0, y: 10 }}
                                             animate={{ opacity: 1, y: 0 }}
                                             exit={{ opacity: 0, y: 10 }}
                                             transition={{ duration: 0.5 }}
-                                            className="mt-64 text-2xl font-bold absolute bg-white text-neutral-800 border border-white px-2 py-1 rounded-lg"
+                                            className="mt-20 xl:mt-24 2xl:mt-64 text-sm lg:text-md xl:text-lg 2xl:text-2xl font-bold absolute bg-white text-neutral-800 border border-white px-2 py-1 rounded-lg"
                                         >
                                             March 2025
                                         </motion.div>
@@ -111,11 +117,11 @@ function Portfolio() {
                     ))}
                 </div>
                 {/* Third Column */}
-                <div className="w-1/3 flex flex-col gap-4">
+                <div className="lg:w-1/3 lg:flex lg:flex-col gap-3 lg:gap-4">
                     {images.filter(img => img.col === 3).map((img, index) => (
                         <div
                             key={index}
-                            className="relative flex items-center justify-center p-2 cursor-pointer"
+                            className="relative flex items-center justify-center 2xl:p-2 cursor-pointer"
                             onMouseEnter={() => setHoveredIndex(index)}
                             onMouseLeave={() => setHoveredIndex(null)}
                         >
@@ -128,16 +134,16 @@ function Portfolio() {
                                             animate={{ opacity: 1, y: 0 }}
                                             exit={{ opacity: 0, y: 10 }}
                                             transition={{ duration: 0.5 }}
-                                            className="mt-40 text-2xl font-bold absolute bg-white text-neutral-800 border border-white px-2 py-1 rounded-lg"
+                                            className="mt-4 2xl:mt-40 text-sm lg:text-md xl:text-lg 2xl:text-2xl font-bold absolute bg-white text-neutral-800 border border-white px-2 py-1 rounded-lg"
                                         >
-                                            Image {index + 1}
+                                            Image {index + 6}
                                         </motion.div>
                                         <motion.div
                                             initial={{ opacity: 0, y: 10 }}
                                             animate={{ opacity: 1, y: 0 }}
                                             exit={{ opacity: 0, y: 10 }}
                                             transition={{ duration: 0.5 }}
-                                            className="mt-64 text-2xl font-bold absolute bg-white text-neutral-800 border border-white px-2 py-1 rounded-lg"
+                                            className="mt-20 xl:mt-24 2xl:mt-64 text-sm lg:text-md xl:text-lg 2xl:text-2xl font-bold absolute bg-white text-neutral-800 border border-white px-2 py-1 rounded-lg"
                                         >
                                             March 2025
                                         </motion.div>
@@ -147,7 +153,46 @@ function Portfolio() {
                         </div>
                     ))}
                     <div className="flex items-center justify-center">
-                        <a href="#" className={`text-sm sm:text-md md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-semibold underline ${theme === 'light' ? 'text-orange-500' : 'text-orange-400'}`}>Load more work</a>
+                        <a href="#" className={`text-sm sm:text-md md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-semibold underline mt-5 lg:mt-8 2xl:mt-16 ${theme === 'light' ? 'text-orange-500' : 'text-orange-400'}`}>Load more work</a>
+                    </div>
+                </div>
+            </div>
+
+
+            {/* Mobile Layout (less than lg) */}
+            <div className="lg:hidden flex flex-col items-center">
+                {/* Title Section */}
+                <div className="flex items-center justify-center mb-4 sm:mb-8 pl-6 pr-16 md:px-0">
+                    <div className="flex flex-col items-center justify-center md:-ml-12">
+                        <p className={`text-sm text-center transform -rotate-90 mb-8 w-20 md:w-28 xl:w-40 ${theme === 'light' ? 'text-neutral-600' : 'text-neutral-400 '}`}>MY WORKS</p>
+                        <div className={`w-1 h-16 md:h-20 ${theme === 'light' ? ' bg-neutral-600' : ' bg-neutral-400'}`}></div>
+                    </div>
+                    <div>
+                        <h1 className={`text-2xl font-bold mb-4 leading-snug ${theme === 'light' ? 'text-neutral-800' : 'text-white'}`}>See My Works Which Will Amaze You!</h1>
+                        <p className={`text-sm mb-4 leading-relaxed ${theme === 'light' ? 'text-neutral-600' : 'text-neutral-400 '}`}>We develop the best quality website that serves for the long-term. Well-documented, clean, easy and elegant interface helps any non-technical clients.</p>
+                    </div>
+                </div>
+
+                {/* Image Grid */}
+                <div className="grid grid-cols-2 gap-2 sm:gap-3 px-16 md:px-0">
+                    {/* First Column (4 Images) */}
+                    <div className="flex flex-col gap-2 sm:gap-3">
+                        {mobileImages.slice(0, 3).map((src, index) => (
+                            <div key={index} className="relative">
+                                <img src={src} alt={`Portfolio ${index + 1}`} className="w-full object-cover rounded-2xl" />
+                            </div>
+                        ))}
+                        <div className="flex justify-center lg:hidden">
+                            <a href="#" className={`text-lg sm:text-xl md:text-2xl font-semibold underline mt-12 sm:mt-16 md:mt-28 ${theme === 'light' ? 'text-orange-500' : 'text-orange-400'}`}>Load more work</a>
+                        </div>
+                    </div>
+                    {/* Second Column (3 Images + Load More) */}
+                    <div className="flex flex-col gap-2 sm:gap-3">
+                        {mobileImages.slice(3, 7).map((src, index) => (
+                            <div key={index} className="relative">
+                                <img src={src} alt={`Portfolio ${index + 5}`} className="w-full object-cover rounded-2xl" />
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
