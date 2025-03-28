@@ -31,6 +31,7 @@ function Portfolio() {
 
     return (
         <div className="w-5/6 mx-auto mt-40 xl:mt-56 2xl:mt-72" id="portfolio">
+            {/* Laptop Layout (more than lg) */}
             <div className="hidden lg:flex lg:gap-3 lg:gap-4 lg:-ml-12 xl:-ml-16 xl:-mr-2 2xl:mr-28 2xl:ml-8">
                 {/* First Column */}
                 <div className="lg:w-1/3 lg:flex lg:flex-col gap-3 lg:gap-4">
