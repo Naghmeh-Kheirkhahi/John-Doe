@@ -16,9 +16,10 @@ function Contact() {
         { name: "YouTube", icon: <FaYoutube /> },
     ];
 
+
     return (
-        <div className="2xl:w-4/5 pl-6 xl:pl-8 pr-16 md:pr-24 xl:pr-28 2xl:px-24 mx-16 2xl:mx-auto mt-32 xl:mt-48 2xl:mt-72 pb-20 md:pb-24 xl:pb-32 flex flex-col md:flex-row" id="contact">
-            <div className="md:w-3/5 mb-8 md:mb-0 md:mr-8 lg:mr-10 xl:mr-16">
+        <div className="2xl:w-5/6 lg:ml-14 xl:ml-12 lg:mr-24 xl:mr-28 2xl:mx-auto mt-20 md:mt-40 lg:mt-48 xl:mt-64 2xl:mt-80 flex flex-col lg:flex-row pb-24 2xl:pb-32 2xl:pl-8 2xl:pr-28" id="contact">
+            <div className="ml-16 sm:ml-20 md:ml-8 lg:ml-0 mr-28 md:mr-16 lg:w-3/5 mt-8 pl-3 sm:pl-2 md:pl-1 lg:pr-16 xl:pr-20">
                 <div className="mb-4 2xl:mb-0 mt-8 md:mt-0 flex items-start">
                     <div className="flex flex-col items-center justify-center mt-8">
                         <p className={`text-sm xl:text-lg 2xl:text-2xl text-center transform -rotate-90 mb-8 xl:mb-12 2xl:mb-16 w-20 md:w-28 xl:w-40 ${theme === 'light' ? 'text-neutral-600' : 'text-neutral-400 '}`}>CONTACT</p>
@@ -71,7 +72,7 @@ function Contact() {
                     </div>
                 </div>
             </div>
-            <div className="md:w-2/5 pl-16 pr-6 md:px-0">
+            <div className="w-2/3 md:w-3/4 mx-auto lg:w-2/5 mt-8 md:mt-12 lg:mt-8 px-5 sm:px-6 md:pl-0 2xl:pl-8 lg:pr-2 xl:pr-0">
                 <form className={`p-6 md:p-4 lg:p-5 xl:p-6 2xl:p-12 rounded-xl border ${theme === 'light' ? 'bg-white border-white' : 'bg-neutral-800 border-neutral-800'}`}>
                     <div className="mb-4 lg:mb-6 2xl:mb-8 relative">
                         <label className={`text-sm lg:text-md xl:text-lg 2xl:text-xl font-bold block mb-2 ${theme === 'light' ? 'text-neutral-800' : 'text-white'}`} htmlFor="name">Name</label>
